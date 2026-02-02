@@ -1,0 +1,28 @@
+version: '3.9'
+services:
+  product-db:
+    image: postgres:17
+    container_name: product-db
+    environment:
+      POSTGRES_DB: product_db
+      POSTGRES_USER: product_user
+      POSTGRES_PASSWORD: product_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - product_data:/var/lib/postgresql/data
+
+  product-service:
+    build: .
+    container_name: product-service
+    depends_on:
+      - product-db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://product-db:5432/product_db
+      SPRING_DATASOURCE_USERNAME: product_user
+      SPRING_DATASOURCE_PASSWORD: product_pass
+    ports:
+      - "8080:8080"
+
+volumes:
+  product_data:
