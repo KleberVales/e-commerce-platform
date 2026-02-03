@@ -30,6 +30,15 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
+    // Spring MVC
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // Validação (DTOs)
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    // PostgreSQL
+    runtimeOnly 'org.postgresql:postgresql:42.7.3'
+
 }
 
 tasks.named('test') {
