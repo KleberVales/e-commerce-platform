@@ -58,4 +58,35 @@ public class UserController {
         return ResponseEntity.ok(dto);
     }
 
+    @GetMapping("/by-username")
+    public ResponseEntity<UserResponseDTO> findByUsername(@RequestParam String username) {
+        User user = userService.findByUsername(username);
+
+        UserResponseDTO dto = new UserResponseDTO(
+                user.getId(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getPasswordHash()
+        );
+
+        return ResponseEntity.ok(dto);
+    }
+
+    @GetMapping("/by-email")
+    public ResponseEntity<UserResponseDTO> findByEmail(@RequestParam String email) {
+        User user = userService.findByEmail(email);
+
+        UserResponseDTO dto = new UserResponseDTO(
+                user.getId(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getPasswordHash()
+        );
+
+        return ResponseEntity.ok(dto);
+    }
+
+
+
+
 }
