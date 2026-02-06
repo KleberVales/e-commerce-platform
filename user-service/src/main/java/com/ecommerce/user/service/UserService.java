@@ -1,5 +1,6 @@
 package com.ecommerce.user.service;
 
+import com.ecommerce.user.dto.UserRegisterDTO;
 import com.ecommerce.user.dto.UserRequest;
 import com.ecommerce.user.dto.UserResponse;
 import com.ecommerce.user.entity.User;
@@ -17,6 +18,20 @@ public class UserService {
                        PasswordEncoder passwordEncoder) {
         this.repository = repository;
         this.passwordEncoder = passwordEncoder;
+    }
+
+    // Registrando usuários
+    public User register(UserRegisterDTO userRegisterDTO) {
+
+        User user = new User();
+
+        user.setUsername(userRegisterDTO.getUsername());
+        user.setPasswordHash(passwordEncoder.encode(userRegisterDTO.getPasswordHash()));
+        user.setRole(userRegisterDTO.getRole());
+
+
+        return repository.save(user);
+
     }
 
     public UserResponse create(UserRequest request) {

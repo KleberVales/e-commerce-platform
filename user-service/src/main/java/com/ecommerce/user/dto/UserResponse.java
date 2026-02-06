@@ -1,5 +1,10 @@
 package com.ecommerce.user.dto;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class UserResponse {
 
     private Long id;
@@ -14,9 +19,9 @@ public class UserResponse {
         this.enabled = enabled;
     }
 
-    public Long getId() { return id; }
-    public String getUsername() { return username; }
-    public String getRole() { return role; }
-    public boolean isEnabled() { return enabled; }
+    public UserResponse() {}
+
+
+
 }
 

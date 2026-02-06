@@ -1,7 +1,9 @@
 package com.ecommerce.user.controller;
 
+import com.ecommerce.user.dto.UserRegisterDTO;
 import com.ecommerce.user.dto.UserRequest;
 import com.ecommerce.user.dto.UserResponse;
+import com.ecommerce.user.entity.User;
 import com.ecommerce.user.service.UserService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -25,6 +27,22 @@ public class UserController {
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(service.create(request));
+    }
+
+    // Registrar Usuários
+    @PostMapping("/register")
+    public UserResponse register(@RequestBody @Valid UserRegisterDTO dto) {
+
+        User user = service.register(dto);
+
+        UserResponse userResponse = new UserResponse();
+
+        userResponse.setUsername(user.getUsername());
+        userResponse.setId(user.getId());
+
+
+        return userResponse;
+
     }
 
     @GetMapping("/me")
