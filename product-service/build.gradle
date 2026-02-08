@@ -34,6 +34,18 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok:1.18.30'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 
+	// Kafka
+	implementation 'org.springframework.kafka:spring-kafka'
+
+	// Swanger
+	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.5.0'
+
+	// PostgreSQL
+	runtimeOnly 'org.postgresql:postgresql:42.7.3'
+
+	// Spring MVC
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
 
 }
 
