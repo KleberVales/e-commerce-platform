@@ -14,5 +14,5 @@ Kleber Vales
 
 Java & Spring Software Engineer
 
-Cloud | DevOps | Docker | Kubernetes | Generative AI
+Cloud | DevOps | Docker | Kubernetes | Kafka | Generative AI
 
