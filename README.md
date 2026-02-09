@@ -10,7 +10,7 @@
 ---
 
 - Serviço de login
-- Serviços de CRUD de usuários
+- Operações CRUD de usuários
 
 
 ---
