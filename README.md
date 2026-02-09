@@ -10,6 +10,7 @@
 ---
 
 - Serviço de login
+- Serviços de CRUD de usuários
 
 
 ---
