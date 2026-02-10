@@ -35,6 +35,8 @@ This repository contains microservices that implement separate functionalities i
 | `product-service` | CRUD of products |
 | `user-test` | User testing / validations |
 
+Each service is a standalone Spring Boot project, with its own business logic and configuration.
+
 ---
 
 
