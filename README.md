@@ -9,6 +9,10 @@
 
 ---
 
+A microservices platform built in Java and Spring Boot, organized with various services representing common functionalities in e-commerce applications (such as login service, shopping cart, products, orders, etc.). This project serves both as a study and as a basis for developing distributed architectures with Spring Boot and communication between services.
+
+---
+
 - Serviço de login
 - Operações CRUD de usuários
 - Serviço de registro de produtos com PostgreSQL e Kafka
