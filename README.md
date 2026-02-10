@@ -47,6 +47,7 @@ The project uses the following main technologies:
 - 🔹 **Spring Boot** (Spring Web, Spring Data, etc.)
 - 🔹 **PostgreSQL**
 - 🔹 **Apache Kafka**
+- 🔹 **Docker**
 
 
 
