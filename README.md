@@ -25,20 +25,6 @@ This repository contains microservices that implement separate functionalities i
 
 ---
 
-| Service | Description |
-
-|---------|-----------|
-
-| `auth-test` | Authentication validation (test) |
-
-| `cart-service` | Shopping cart operations |
-
-| `order-service` | Order management |
-
-| `product-service` | Product CRUD |
-
-| `user-test` | User testing / validations |
-
 ## 🧩 Services and Features
 
 
