@@ -29,11 +29,11 @@ This repository contains microservices that implement separate functionalities i
 
 | Serviço | Descrição |
 |---------|-----------|
-| `auth-test` | Validação de autenticação (teste) |
-| `cart-service` | Operações de carrinho de compras |
-| `order-service` | Gerenciamento de pedidos |
-| `product-service` | CRUD de produtos |
-| `user-test` | Testes de usuário / validações |
+| `auth-test` | Authentication validation (test) |
+| `cart-service` | Shopping cart operations |
+| `order-service` | Order management |
+| `product-service` | CRUD of products |
+| `user-test` | User testing / validations |
 
 ---
 
