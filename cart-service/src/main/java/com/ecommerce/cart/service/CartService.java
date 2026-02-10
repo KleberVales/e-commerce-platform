@@ -19,8 +19,11 @@ public class CartService {
     }
 
     public Cart getCartByUser(UUID userId) {
+
+        CartStatus cartStatus = CartStatus.ACTIVE;
+
         return repository.findByUserId(userId)
-                .orElseGet(() -> repository.save(new Cart(userId)));
+                .orElseGet(() -> repository.save(new Cart(userId, cartStatus)));
     }
 
     public Cart addItem(UUID userId, AddItemRequestDTO dto) {

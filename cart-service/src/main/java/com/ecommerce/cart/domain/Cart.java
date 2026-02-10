@@ -30,6 +30,11 @@ public class Cart {
         this.userId = userId;
     }
 
+    public Cart(UUID userId, CartStatus status) {
+        this.userId = userId;
+        this.status = status;
+    }
+
     public void addItem(UUID productId, int quantity) {
 
         CartItem item = items.stream()
