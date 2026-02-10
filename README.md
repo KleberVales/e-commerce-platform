@@ -18,7 +18,7 @@ A microservices platform built in Java and Spring Boot, organized with various s
 This repository contains microservices that implement separate functionalities independently, using:
 
 - Java with Spring Boot
-- Microserviços organizados por domínio
+- Microservices organized by domain
 - PostgreSQL as a database
 
 
