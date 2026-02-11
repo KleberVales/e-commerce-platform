@@ -15,7 +15,7 @@ public class CartClient {
 
     public List<OrderItem> getCartItems(Long userId) {
         return webClient.get()
-                .uri("http://cart-service/carts/{userId}", userId)
+                .uri("http://localhost:8081/carts/{userId}", userId)
                 .retrieve()
                 .bodyToFlux(OrderItem.class)
                 .collectList()

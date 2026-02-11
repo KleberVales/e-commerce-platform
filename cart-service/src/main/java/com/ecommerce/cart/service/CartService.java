@@ -31,7 +31,7 @@ public class CartService {
         Cart cart = repository.findByUserId(userId)
                 .orElseGet(() -> repository.save(new Cart(userId)));
 
-        cart.addItem(dto.getProductId(), dto.getQuantity());
+        cart.addItem(dto.getProductId(), dto.getQuantity(), dto.getPrice());
 
         return repository.save(cart);
     }
