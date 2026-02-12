@@ -39,7 +39,7 @@ Each service is a standalone Spring Boot project, with its own business logic an
 
 ---
 
-## 🛠 Technologies
+## Technologies
 
 The project uses the following main technologies:
 
