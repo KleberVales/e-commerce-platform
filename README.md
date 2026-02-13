@@ -72,7 +72,6 @@ cd product-platform
 
 Kleber Vales
 
-Email: klebervales.dev@gmail.com
 
 
 
