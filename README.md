@@ -62,4 +62,64 @@ cd product-platform
 
 ## Flowchart
 
-<img width="575" height="746" alt="Captura de tela 2026-02-10 100500" src="https://github.com/user-attachments/assets/7c537234-74b5-4075-9514-01177282fb14" />
+
+```mermaid
+flowchart TD
+    subgraph Frontend
+        UI[Client Application]
+    end
+    
+    subgraph Gateway
+        API[API Gateway]
+    end
+    
+    subgraph Core_Services
+        AUTH[Auth Service]
+        USER[User Service]
+    end
+    
+    subgraph Message_Broker
+        BROKER[Message Broker<br/>RabbitMQ/Kafka]
+    end
+    
+    subgraph Business_Services
+        CART[Cart Service]
+        PRODUCT[Product Service]
+        ORDER[Order Service]
+        PAYMENT[Payment Service]
+        INVENTORY[Inventory Service]
+    end
+    
+    UI -->|HTTP/HTTPS| API
+    API -->|Authentication| AUTH
+    API -->|User Management| USER
+    
+    AUTH -.->|Events/Messages| BROKER
+    USER -.->|Events/Messages| BROKER
+    
+    BROKER <-->|Pub/Sub| CART
+    BROKER <-->|Pub/Sub| PRODUCT
+    BROKER <-->|Pub/Sub| ORDER
+    BROKER <-->|Pub/Sub| PAYMENT
+    BROKER <-->|Pub/Sub| INVENTORY
+    
+    CART -.->|Async Communication| BROKER
+    PRODUCT -.->|Async Communication| BROKER
+    ORDER -.->|Async Communication| BROKER
+    PAYMENT -.->|Async Communication| BROKER
+    INVENTORY -.->|Async Communication| BROKER
+    
+    classDef frontend fill:#e1f5fe,stroke:#01579b
+    classDef gateway fill:#fff3e0,stroke:#e65100
+    classDef core fill:#e8f5e8,stroke:#1b5e20
+    classDef broker fill:#f3e5f5,stroke:#4a148c
+    classDef business fill:#fff0f0,stroke:#b71c1c
+    
+    class UI frontend
+    class API gateway
+    class AUTH,USER core
+    class BROKER broker
+    class CART,PRODUCT,ORDER,PAYMENT,INVENTORY business
+
+```
+
