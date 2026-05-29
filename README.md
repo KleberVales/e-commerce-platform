@@ -129,5 +129,5 @@ flowchart TD
 
 Kleber Vales
 
-Java & Spring Software
+Java & Spring
 
