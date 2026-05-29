@@ -58,7 +58,7 @@ The project uses the following main technologies:
 
 **Clone the repository**
 ```bash
-git clone https://github.com/KleberVales/product
+git clone https://github.com/KleberVales
 ```
 
 ## Flowchart
