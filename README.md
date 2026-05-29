@@ -129,5 +129,3 @@ flowchart TD
 
 Kleber Vales
 
-Java
-
