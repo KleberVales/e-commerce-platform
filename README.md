@@ -120,7 +120,7 @@ flowchart TD
     class API gateway
     class AUTH,USER core
     class BROKER broker
-    class CART,PRODUCT,ORDER,PAYMENT
+   
 
 ```
 
